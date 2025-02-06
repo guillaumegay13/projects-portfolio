@@ -12,7 +12,7 @@ export const translations = {
     sections: {
       contact: "contact",
       projects: "projects",
-      thoughts: "read my thoughts",
+      thoughts: "blog",
       readMore: "read more →",
       viewSource: "View Source →",
       visitProject: "Visit Project →",
@@ -31,7 +31,7 @@ export const translations = {
     sections: {
       contact: "contact",
       projects: "projets",
-      thoughts: "lire mes articles",
+      thoughts: "blog",
       readMore: "lire plus →",
       viewSource: "Voir le Code →",
       visitProject: "Voir le Projet →",
