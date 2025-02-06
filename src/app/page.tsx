@@ -2,7 +2,7 @@
 
 import { useLanguage } from './contexts/LanguageContext';
 import { translations } from './i18n/translations';
-
+import { Translation } from './i18n/translation.interface';
 interface BlogPost {
   title: string;
   excerpt: string;
@@ -12,7 +12,7 @@ interface BlogPost {
 
 export default function Home() {
   const { language } = useLanguage();
-  const t = translations[language];
+  const t = translations[language] as Translation;
   const projects = getProjects(t, language);
 
   return (
@@ -224,7 +224,8 @@ export default function Home() {
   );
 }
 
-const getProjects = (t: any, language: string) => [
+// Update the getProjects function signature
+const getProjects = (t: Translation, language: string) => [
   {
     title: t.projects.mytrainer.title,
     description: t.projects.mytrainer.description,

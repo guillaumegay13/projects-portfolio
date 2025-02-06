@@ -1,4 +1,6 @@
-export const translations = {
+import { Translation } from './translation.interface';
+
+export const translations: Record<string, Translation> = {
   en: {
     hero: {
       title: "guillaume gay.",
