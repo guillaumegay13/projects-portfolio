@@ -16,6 +16,25 @@ export const translations = {
       readMore: "read more →",
       viewSource: "View Source →",
       visitProject: "Visit Project →",
+      noBlogPosts: "no blog posts available yet",
+    },
+    projects: {
+      mytrainer: {
+        title: "MyTrainer",
+        description: "A fitness personal trainer mobile app using generative AI."
+      },
+      flexsdk: {
+        title: "Flex Python SDK",
+        description: "Dalet Flex is a powerful media asset management system. I built a Python SDK to allow users to manage their assets and operations programmatically."
+      },
+      flexexecutor: {
+        title: "Flex Remote Executor",
+        description: "Dalet Flex is a powerful media asset management system. I built a command line tool to allow users to manage their assets and operations remotely."
+      },
+      anonymization: {
+        title: "Anonymization NLP Model",
+        description: "Trained an NLP model and developped an API for text anonymization, capable of identifying and masking sensitive information in specific conversations for GDPR compliance."
+      }
     }
   },
   fr: {
@@ -35,6 +54,25 @@ export const translations = {
       readMore: "lire plus →",
       viewSource: "Voir le Code →",
       visitProject: "Voir le Projet →",
+      noBlogPosts: "aucun article de blog disponible pour le moment",
+    },
+    projects: {
+      mytrainer: {
+        title: "MyTrainer",
+        description: "Une application mobile de coaching sportif personnalisé utilisant l'IA générative."
+      },
+      flexsdk: {
+        title: "Flex Python SDK",
+        description: "Dalet Flex est un puissant système de gestion de médias. J'ai développé un SDK Python permettant aux utilisateurs de gérer leurs ressources et opérations de manière programmatique."
+      },
+      flexexecutor: {
+        title: "Flex Remote Executor",
+        description: "Dalet Flex est un puissant système de gestion de médias. J'ai développé un outil en ligne de commande permettant aux utilisateurs de gérer leurs ressources et opérations à distance."
+      },
+      anonymization: {
+        title: "Modèle NLP d'Anonymisation",
+        description: "Entraînement d'un modèle NLP et développement d'une API pour l'anonymisation de texte, capable d'identifier et de masquer les informations sensibles dans des conversations spécifiques pour la conformité RGPD."
+      }
     }
   }
 };

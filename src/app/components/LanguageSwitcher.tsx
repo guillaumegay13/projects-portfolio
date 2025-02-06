@@ -2,9 +2,19 @@
 
 import { useLanguage } from '../contexts/LanguageContext';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 export default function LanguageSwitcher() {
   const { language, setLanguage } = useLanguage();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null; // Return nothing during SSR
+  }
 
   return (
     <button

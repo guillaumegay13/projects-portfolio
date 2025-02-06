@@ -11,25 +11,30 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-function getInitialLanguage(): Language {
-    if (typeof window === 'undefined') return 'en';
-
-    // Check localStorage first
-    const stored = localStorage.getItem('language') as Language;
-    if (stored === 'en' || stored === 'fr') return stored;
-
-    // Then check browser language
-    const browserLang = navigator.language.toLowerCase();
-    return browserLang.startsWith('fr') ? 'fr' : 'en';
-}
-
 export function LanguageProvider({ children }: { children: ReactNode }) {
-    const [language, setLanguage] = useState<Language>(getInitialLanguage);
+    const [language, setLanguage] = useState<Language>('en'); // Start with default
+    const [isClient, setIsClient] = useState(false);
 
     useEffect(() => {
-        localStorage.setItem('language', language);
-        document.documentElement.lang = language;
-    }, [language]);
+        setIsClient(true);
+        // Check localStorage first
+        const stored = localStorage.getItem('language') as Language;
+        if (stored === 'en' || stored === 'fr') {
+            setLanguage(stored);
+            return;
+        }
+
+        // Then check browser language
+        const browserLang = navigator.language.toLowerCase();
+        setLanguage(browserLang.startsWith('fr') ? 'fr' : 'en');
+    }, []);
+
+    useEffect(() => {
+        if (isClient) {
+            localStorage.setItem('language', language);
+            document.documentElement.lang = language;
+        }
+    }, [language, isClient]);
 
     return (
         <LanguageContext.Provider value={{ language, setLanguage }}>

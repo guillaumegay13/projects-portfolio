@@ -3,9 +3,17 @@
 import { useLanguage } from './contexts/LanguageContext';
 import { translations } from './i18n/translations';
 
+interface BlogPost {
+  title: string;
+  excerpt: string;
+  date: string;
+  link: string;
+}
+
 export default function Home() {
   const { language } = useLanguage();
   const t = translations[language];
+  const projects = getProjects(t, language);
 
   return (
     <div className="min-h-screen p-8 max-w-3xl mx-auto font-light">
@@ -179,79 +187,72 @@ export default function Home() {
       {/* Read My Thoughts Section */}
       <section id="thoughts" className="mb-16">
         <h2 className="text-2xl mb-8">{t.sections.thoughts}</h2>
-        <div className="grid grid-cols-1 gap-6">
-          {blogPosts.map((post) => (
-            <div
-              key={post.title}
-              className="border border-gray-200 dark:border-gray-800 p-6 rounded-lg"
-            >
-              <h3 className="text-xl mb-2">{post.title}</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                {post.excerpt}
-              </p>
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-500 dark:text-gray-400">
-                  {post.date}
-                </span>
-                <a
-                  href={post.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm underline hover:text-black dark:hover:text-white"
-                >
-                  {t.sections.readMore}
-                </a>
+        {blogPosts.length > 0 ? (
+          <div className="grid grid-cols-1 gap-6">
+            {blogPosts.map((post) => (
+              <div
+                key={post.title}
+                className="border border-gray-200 dark:border-gray-800 p-6 rounded-lg"
+              >
+                <h3 className="text-xl mb-2">{post.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  {post.excerpt}
+                </p>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-gray-500 dark:text-gray-400">
+                    {post.date}
+                  </span>
+                  <a
+                    href={post.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm underline hover:text-black dark:hover:text-white"
+                  >
+                    {t.sections.readMore}
+                  </a>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        ) : (
+          <p className="text-gray-600 dark:text-gray-300">
+            {t.sections.noBlogPosts}
+          </p>
+        )}
       </section>
     </div>
   );
 }
 
-const projects = [
+const getProjects = (t: any, language: string) => [
   {
-    title: "MyTrainer",
-    description: "A fitness personal trainer mobile app using generative AI.",
+    title: t.projects.mytrainer.title,
+    description: t.projects.mytrainer.description,
     technologies: ["Flutter", "GenAI", "Firebase", "Python", "FastAPI"],
     github: null,
     demo: "https://traincoach.app",
   },
   {
-    title: "Flex Python SDK",
-    description: "Dalet Flex is a powerful media asset management system. I built a Python SDK to allow users to manage their assets and operations programmatically.",
+    title: t.projects.flexsdk.title,
+    description: t.projects.flexsdk.description,
     technologies: ["Python", "API"],
     github: "https://github.com/guillaumegay13/flex-python-sdk",
     demo: "https://www.dalet.com/products/flex/",
   },
   {
-    title: "Flex Remote Executor",
-    description: "Dalet Flex is a powerful media asset management system. I built a command line tool to allow users to manage their assets and operations remotely.",
+    title: t.projects.flexexecutor.title,
+    description: t.projects.flexexecutor.description,
     technologies: ["Python", "API"],
     github: "https://github.com/guillaumegay13/flex-remote-executor",
     demo: "https://www.dalet.com/products/flex/",
   },
   {
-    title: "Anonymization NLP Model",
-    description: "Trained an NLP model and developped an API for text anonymization, capable of identifying and masking sensitive information in specific conversations for GDPR compliance.",
-    technologies: ["Python", "Data", "NLP", "API", "GDPR"],
+    title: t.projects.anonymization.title,
+    description: t.projects.anonymization.description,
+    technologies: ["Python", "Data", "NLP", "API", language === 'fr' ? "RGPD" : "GDPR"],
     github: null,
     demo: "https://drive.google.com/file/d/1YTY1ke9ya6hJpDpdMWipR0pnvPVZ9XjX/view?usp=share_link"
   }
 ];
 
-const blogPosts = [
-  {
-    title: "The Future of AI in Fitness",
-    excerpt: "Exploring how artificial intelligence is revolutionizing personal training and workout planning.",
-    date: "2024-03-15",
-    link: "https://your-blog-url.com/ai-fitness",
-  },
-  {
-    title: "Building Scalable Python SDKs",
-    excerpt: "Lessons learned from developing the Flex Python SDK and best practices for SDK design.",
-    date: "2024-02-28",
-    link: "https://your-blog-url.com/python-sdk",
-  },
-];
+const blogPosts: BlogPost[] = [];
