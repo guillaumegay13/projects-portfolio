@@ -39,7 +39,7 @@ export const translations: Record<string, Translation> = {
       },
       medical_assistant: {
         title: "Medical Consultation Assistant",
-        description: "Developed a medical consultation assistant that records, transcribes, and summarizes medical consultations."
+        description: "An AI-powered medical consultation assistant that records, transcribes, and summarizes medical consultations."
       },
       findconcierge: {
         title: "Find Concierge",
@@ -86,7 +86,7 @@ export const translations: Record<string, Translation> = {
       },
       medical_assistant: {
         title: "Assistant de Consultation Médicale",
-        description: "Développé un assistant de consultation médicale qui enregistre, transcribe et résume les consultations médicales."
+        description: "Assistant IA de consultation médicale qui enregistre, transcris et résume les consultations médicales."
       },
       findconcierge: {
         title: "Find Concierge",
