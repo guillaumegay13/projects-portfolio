@@ -260,6 +260,13 @@ const getProjects = (t: Translation, language: string) => [
     technologies: ["Python", "React", "Typescript", "Whisper", "AI"],
     github: "https://github.com/guillaumegay13/medical-consultation-assistant",
     demo: null
+  },
+  {
+    title: t.projects.findconcierge.title,
+    description: t.projects.findconcierge.description,
+    technologies: ["Nextjs", "MongoDB", "Typescript", "TailwindCSS"],
+    github: "https://github.com/guillaumegay13/find-concierge",
+    demo: t.projects.findconcierge.demo
   }
 ];
 

@@ -40,6 +40,11 @@ export const translations: Record<string, Translation> = {
       medical_assistant: {
         title: "Medical Consultation Assistant",
         description: "Developed a medical consultation assistant that records, transcribes, and summarizes medical consultations."
+      },
+      findconcierge: {
+        title: "Find Concierge",
+        description: "Short-term rental concierge directory.",
+        demo: "https://find-concierge.vercel.app/"
       }
     }
   },
@@ -82,6 +87,11 @@ export const translations: Record<string, Translation> = {
       medical_assistant: {
         title: "Assistant de Consultation Médicale",
         description: "Développé un assistant de consultation médicale qui enregistre, transcribe et résume les consultations médicales."
+      },
+      findconcierge: {
+        title: "Find Concierge",
+        description: "Annuaire de concierges pour location courte durée.",
+        demo: "http://conciergerielocationcourte.fr"
       }
     }
   }

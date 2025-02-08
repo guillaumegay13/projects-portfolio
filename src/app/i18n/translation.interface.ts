@@ -38,5 +38,10 @@ export interface Translation {
             title: string;
             description: string;
         };
+        findconcierge: {
+            title: string;
+            description: string;
+            demo: string;
+        };
     };
 } 
