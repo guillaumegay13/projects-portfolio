@@ -34,5 +34,9 @@ export interface Translation {
             title: string;
             description: string;
         };
+        medical_assistant: {
+            title: string;
+            description: string;
+        };
     };
 } 
