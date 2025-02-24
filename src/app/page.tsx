@@ -231,7 +231,7 @@ const getProjects = (t: Translation, language: string) => [
     description: t.projects.mytrainer.description,
     technologies: ["Flutter", "GenAI", "Firebase", "Python", "FastAPI"],
     github: null,
-    demo: "https://traincoach.app",
+    demo: "https://mytrainerapp.io",
   },
   {
     title: t.projects.flexsdk.title,
