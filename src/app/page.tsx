@@ -14,6 +14,7 @@ export default function Home() {
   const { language } = useLanguage();
   const t = translations[language] as Translation;
   const projects = getProjects(t, language);
+  const partners = getPartners();
 
   return (
     <div className="min-h-screen p-8 max-w-3xl mx-auto font-light">
@@ -184,6 +185,28 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Partners Section */}
+      <section id="partners" className="mb-16">
+        <h2 className="text-2xl mb-8">{t.sections.partners}</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+          {partners.map((partner) => (
+            <div
+              key={partner.name}
+              className="border border-gray-200 dark:border-gray-800 p-4 rounded-lg flex flex-col items-center justify-center hover:border-gray-400 dark:hover:border-gray-600 transition-colors"
+            >
+              {partner.logo ? (
+                <img
+                  src={partner.logo}
+                  alt={partner.name}
+                  className="h-16 object-contain mb-3 grayscale hover:grayscale-0 transition-all"
+                />
+              ) : null}
+              <span className="text-center text-gray-600 dark:text-gray-300">{partner.name}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Read My Thoughts Section */}
       <section id="thoughts" className="mb-16">
         <h2 className="text-2xl mb-8">{t.sections.thoughts}</h2>
@@ -267,6 +290,21 @@ const getProjects = (t: Translation, language: string) => [
     technologies: ["Nextjs", "MongoDB", "Typescript", "TailwindCSS"],
     github: "https://github.com/guillaumegay13/find-concierge",
     demo: t.projects.findconcierge.demo
+  }
+];
+
+const getPartners = () => [
+  {
+    name: "Dalet",
+    logo: "/images/partners/dalet-logo.webp",
+  },
+  {
+    name: "International Olympic Committee",
+    logo: "/images/partners/ioc-logo.webp",
+  },
+  {
+    name: "Radio France",
+    logo: "/images/partners/radiofrance-logo.png",
   }
 ];
 

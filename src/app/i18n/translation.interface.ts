@@ -16,6 +16,7 @@ export interface Translation {
         viewSource: string;
         visitProject: string;
         noBlogPosts: string;
+        partners: string;
     };
     projects: {
         mytrainer: {
@@ -42,6 +43,12 @@ export interface Translation {
             title: string;
             description: string;
             demo: string;
+        };
+    };
+    partners: {
+        dalet: {
+            title: string;
+            description: string;
         };
     };
 } 

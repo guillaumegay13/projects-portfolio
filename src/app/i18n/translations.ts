@@ -19,6 +19,7 @@ export const translations: Record<string, Translation> = {
       viewSource: "View Source →",
       visitProject: "Visit Project →",
       noBlogPosts: "no blog posts available yet",
+      partners: "partners",
     },
     projects: {
       mytrainer: {
@@ -46,6 +47,12 @@ export const translations: Record<string, Translation> = {
         description: "Short-term rental concierge directory.",
         demo: "https://find-concierge.vercel.app/"
       }
+    },
+    partners: {
+      dalet: {
+        title: "Dalet",
+        description: "Dalet is a powerful media asset management system."
+      }
     }
   },
   fr: {
@@ -66,6 +73,7 @@ export const translations: Record<string, Translation> = {
       viewSource: "Voir le Code →",
       visitProject: "Voir le Projet →",
       noBlogPosts: "aucun article de blog disponible pour le moment",
+      partners: "partenaires",
     },
     projects: {
       mytrainer: {
@@ -92,6 +100,12 @@ export const translations: Record<string, Translation> = {
         title: "Find Concierge",
         description: "Annuaire de concierges pour location courte durée.",
         demo: "http://conciergerielocationcourte.fr"
+      }
+    },
+    partners: {
+      dalet: {
+        title: "Dalet",
+        description: "Dalet is a powerful media asset management system."
       }
     }
   }
