@@ -190,8 +190,11 @@ export default function Home() {
         <h2 className="text-2xl mb-8">{t.sections.partners}</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
           {partners.map((partner) => (
-            <div
+            <a
               key={partner.name}
+              href={partner.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="border border-gray-200 dark:border-gray-800 p-4 rounded-lg flex flex-col items-center justify-center hover:border-gray-400 dark:hover:border-gray-600 transition-colors"
             >
               {partner.logo ? (
@@ -202,7 +205,7 @@ export default function Home() {
                 />
               ) : null}
               <span className="text-center text-gray-600 dark:text-gray-300">{partner.name}</span>
-            </div>
+            </a>
           ))}
         </div>
       </section>
@@ -297,14 +300,17 @@ const getPartners = () => [
   {
     name: "Dalet",
     logo: "/images/partners/dalet-logo.webp",
+    link: "https://www.dalet.com"
   },
   {
     name: "International Olympic Committee",
     logo: "/images/partners/ioc-logo.webp",
+    link: "https://olympics.com"
   },
   {
     name: "Radio France",
     logo: "/images/partners/radiofrance-logo.png",
+    link: "https://www.radiofrance.fr"
   }
 ];
 
