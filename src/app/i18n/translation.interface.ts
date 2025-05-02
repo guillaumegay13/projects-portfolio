@@ -44,6 +44,10 @@ export interface Translation {
             description: string;
             demo: string;
         };
+        generation_ia: {
+            title: string;
+            description: string;
+        };
     };
     partners: {
         dalet: {

@@ -260,6 +260,13 @@ const getProjects = (t: Translation, language: string) => [
     demo: "https://mytrainerapp.io",
   },
   {
+    title: t.projects.generation_ia.title,
+    description: t.projects.generation_ia.description,
+    technologies: ["Podcast", "GenAI", language === 'fr' ? "Français" : "French"],
+    github: null,
+    demo: "https://pod.link/1811120641"
+  },
+  {
     title: t.projects.flexsdk.title,
     description: t.projects.flexsdk.description,
     technologies: ["Python", "API"],

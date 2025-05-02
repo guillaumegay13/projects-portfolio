@@ -44,8 +44,12 @@ export const translations: Record<string, Translation> = {
       },
       findconcierge: {
         title: "Find Concierge",
-        description: "Short-term rental concierge directory.",
+        description: "A platform to find and book concierge services, simplifying property management for owners and travelers.",
         demo: "https://find-concierge.vercel.app/"
+      },
+      generation_ia: {
+        title: "Génération IA",
+        description: "Génération IA is a podcast covering Generative AI : news, tools, trends."
       }
     },
     partners: {
@@ -98,8 +102,12 @@ export const translations: Record<string, Translation> = {
       },
       findconcierge: {
         title: "Find Concierge",
-        description: "Annuaire de concierges pour location courte durée.",
-        demo: "http://conciergerielocationcourte.fr"
+        description: "Une plateforme pour trouver et réserver des services de conciergerie, simplifiant la gestion immobilière pour les propriétaires et les voyageurs.",
+        demo: "https://find-concierge.vercel.app/"
+      },
+      generation_ia: {
+        title: "Génération IA",
+        description: "Génération IA est un podcast couvrant l'IA générative : actualité, outils, tendances."
       }
     },
     partners: {
