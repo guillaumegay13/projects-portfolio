@@ -38,10 +38,6 @@ export const translations: Record<string, Translation> = {
         title: "Anonymization NLP Model",
         description: "Trained an NLP model and developped an API for text anonymization, capable of identifying and masking sensitive information in specific conversations for GDPR compliance."
       },
-      medical_assistant: {
-        title: "Medical Consultation Assistant",
-        description: "An AI-powered medical consultation assistant that records, transcribes, and summarizes medical consultations."
-      },
       findconcierge: {
         title: "AirConcierge",
         description: "A platform to find and book concierge services, simplifying property management for owners and travelers.",
@@ -100,14 +96,10 @@ export const translations: Record<string, Translation> = {
         title: "Modèle NLP d'Anonymisation",
         description: "Entraînement d'un modèle NLP et développement d'une API pour l'anonymisation de texte, capable d'identifier et de masquer les informations sensibles dans des conversations spécifiques pour la conformité RGPD."
       },
-      medical_assistant: {
-        title: "Assistant de Consultation Médicale",
-        description: "Assistant IA de consultation médicale qui enregistre, transcris et résume les consultations médicales."
-      },
       findconcierge: {
-        title: "Find Concierge",
+        title: "AirConcierge",
         description: "Une plateforme pour trouver et réserver des services de conciergerie, simplifiant la gestion immobilière pour les propriétaires et les voyageurs.",
-        demo: "https://find-concierge.vercel.app/"
+        demo: "https://airconcierge.io/"
       },
       generation_ia: {
         title: "Génération IA",
