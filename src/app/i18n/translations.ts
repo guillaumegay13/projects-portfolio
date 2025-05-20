@@ -49,7 +49,11 @@ export const translations: Record<string, Translation> = {
       },
       generation_ia: {
         title: "Génération IA",
-        description: "Génération IA is a podcast covering Generative AI : news, tools, trends."
+        description: "Génération IA is a french podcast covering Generative AI : news, tools, trends."
+      },
+      bullets: {
+        title: "Bullets",
+        description: "A mobile app that converts conversations into bullet points."
       }
     },
     partners: {
@@ -108,6 +112,10 @@ export const translations: Record<string, Translation> = {
       generation_ia: {
         title: "Génération IA",
         description: "Génération IA est un podcast couvrant l'IA générative : actualité, outils, tendances."
+      },
+      bullets: {
+        title: "Bullets",
+        description: "Une application mobile qui convertit les conversations en listes de points."
       }
     },
     partners: {

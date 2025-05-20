@@ -48,6 +48,10 @@ export interface Translation {
             title: string;
             description: string;
         };
+        bullets: {
+            title: string;
+            description: string;
+        };
     };
     partners: {
         dalet: {

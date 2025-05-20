@@ -267,6 +267,13 @@ const getProjects = (t: Translation, language: string) => [
     demo: "https://pod.link/1811120641"
   },
   {
+    title: t.projects.bullets.title,
+    description: t.projects.bullets.description,
+    technologies: ["Flutter", "GenAI", "Mobile", "AI"],
+    github: null,
+    demo: "https://www.bulletsapp.io"
+  },
+  {
     title: t.projects.flexsdk.title,
     description: t.projects.flexsdk.description,
     technologies: ["Python", "API"],
@@ -286,13 +293,6 @@ const getProjects = (t: Translation, language: string) => [
     technologies: ["Python", "Data", "NLP", "API", language === 'fr' ? "RGPD" : "GDPR"],
     github: null,
     demo: "https://drive.google.com/file/d/1YTY1ke9ya6hJpDpdMWipR0pnvPVZ9XjX/view?usp=share_link"
-  },
-  {
-    title: t.projects.medical_assistant.title,
-    description: t.projects.medical_assistant.description,
-    technologies: ["Python", "React", "Typescript", "Whisper", "AI"],
-    github: "https://github.com/guillaumegay13/medical-consultation-assistant",
-    demo: null
   },
   {
     title: t.projects.findconcierge.title,
