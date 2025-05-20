@@ -114,7 +114,7 @@ export const translations: Record<string, Translation> = {
         description: "Génération IA est un podcast couvrant l'IA générative : actualité, outils, tendances."
       },
       bullets: {
-        title: "Bullets",
+        title: "bullets.",
         description: "Une application mobile qui convertit les conversations en listes de points."
       }
     },
