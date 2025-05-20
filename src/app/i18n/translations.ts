@@ -43,9 +43,9 @@ export const translations: Record<string, Translation> = {
         description: "An AI-powered medical consultation assistant that records, transcribes, and summarizes medical consultations."
       },
       findconcierge: {
-        title: "Find Concierge",
+        title: "AirConcierge",
         description: "A platform to find and book concierge services, simplifying property management for owners and travelers.",
-        demo: "https://find-concierge.vercel.app/"
+        demo: "https://airconcierge.io/"
       },
       generation_ia: {
         title: "Génération IA",
