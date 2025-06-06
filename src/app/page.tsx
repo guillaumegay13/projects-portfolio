@@ -3,11 +3,16 @@
 import { useLanguage } from './contexts/LanguageContext';
 import { translations } from './i18n/translations';
 import { Translation } from './i18n/translation.interface';
+import { useEffect, useState } from 'react';
+
 interface BlogPost {
+  slug: string;
   title: string;
   excerpt: string;
   date: string;
   link: string;
+  content?: string;
+  published?: boolean;
 }
 
 export default function Home() {
@@ -15,6 +20,25 @@ export default function Home() {
   const t = translations[language] as Translation;
   const projects = getProjects(t, language);
   const partners = getPartners();
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+
+  useEffect(() => {
+    const loadBlogPosts = async () => {
+      try {
+        const response = await fetch(`/api/blog?language=${language}`);
+        if (response.ok) {
+          const posts = await response.json();
+          setBlogPosts(posts);
+        } else {
+          console.error('Failed to fetch blog posts');
+        }
+      } catch (error) {
+        console.error('Error loading blog posts:', error);
+      }
+    };
+
+    loadBlogPosts();
+  }, [language]);
 
   return (
     <div className="min-h-screen p-8 max-w-3xl mx-auto font-light">
@@ -326,4 +350,4 @@ const getPartners = () => [
   }
 ];
 
-const blogPosts: BlogPost[] = [];
+
