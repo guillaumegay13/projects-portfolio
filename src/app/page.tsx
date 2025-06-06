@@ -318,6 +318,11 @@ const getPartners = () => [
     name: "Radio France",
     logo: "/images/partners/radiofrance-logo.png",
     link: "https://www.radiofrance.fr"
+  },
+  {
+    name: "École des Mines de Saint-Étienne",
+    logo: "/images/partners/mines-logo.png",
+    link: "http://mines-stetienne.fr"
   }
 ];
 
