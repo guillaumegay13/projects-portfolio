@@ -5,7 +5,7 @@ date: "2025-07-04"
 published: true
 ---
 
-I recently tried a new revolutionary workflow that helped me implement a whole Figma design for a mobile app in just **1 hour**.
+I recently tried a new revolutionary workflow that helped me implement a whole Figma design for a mobile app **in a few hours**.
 
 ## The tools I used
 
