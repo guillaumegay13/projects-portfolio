@@ -50,6 +50,10 @@ export const translations: Record<string, Translation> = {
       bullets: {
         title: "Bullets",
         description: "A mobile app that converts conversations into bullet points."
+      },
+      pickle: {
+        title: "Pickle",
+        description: "Pregnancy Food Scanner app using GPT-4 API to analyze meals and menus for pregnancy safety."
       }
     },
     partners: {
@@ -108,6 +112,10 @@ export const translations: Record<string, Translation> = {
       bullets: {
         title: "bullets.",
         description: "Une application mobile qui convertit les conversations en listes de points."
+      },
+      pickle: {
+        title: "Pickle",
+        description: "Application de scan alimentaire pour femmes enceintes utilisant l'API GPT-4 pour analyser les repas et menus pour la sécurité pendant la grossesse."
       }
     },
     partners: {

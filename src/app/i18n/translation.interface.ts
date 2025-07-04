@@ -48,6 +48,10 @@ export interface Translation {
             title: string;
             description: string;
         };
+        pickle: {
+            title: string;
+            description: string;
+        };
     };
     partners: {
         dalet: {

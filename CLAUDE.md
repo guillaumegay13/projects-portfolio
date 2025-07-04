@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Next.js-based portfolio website with a multilingual blog system. The project supports English and French content with automatic language switching.
+This is Guillaume Gay's multilingual portfolio website built with Next.js 15, featuring a sophisticated blog system with English and French content. The site showcases software engineering projects, technical blog posts, and professional experience.
 
 ## Common Development Commands
 
@@ -16,7 +16,7 @@ npm run start            # Start production server
 npm run lint             # Run ESLint
 
 # Blog Management
-npm run new-post -- "Post Title"                    # Create English blog post
+npm run new-post -- "Post Title"                    # Create English blog post (default)
 npm run new-post -- "Titre d'Article" --lang fr     # Create French blog post
 ```
 
@@ -30,9 +30,10 @@ npm run new-post -- "Titre d'Article" --lang fr     # Create French blog post
 - **Library**: Core blog logic in `src/app/lib/blog.ts`
 
 ### Key Components
-- **Language System**: `LanguageContext` provides site-wide language state
+- **Language System**: `LanguageContext` provides site-wide language state with browser detection and localStorage persistence
 - **Language Switcher**: `LanguageSwitcher` component for toggling between languages
 - **Translations**: Centralized in `src/app/i18n/translations.ts`
+- **Portfolio Projects**: Defined in `src/app/components/Projects.tsx` with multilingual support
 
 ### File Organization
 ```
@@ -65,13 +66,20 @@ published: true/false
 
 ### Multilingual Workflow
 1. Content is organized by language in separate directories
-2. API endpoints accept language parameters for content retrieval
+2. API endpoints accept `?language=en` or `?language=fr` parameters
 3. Language context automatically switches content based on user preference
 4. Both languages can have independent or translated content
+5. New posts are created as unpublished by default
+
+## Key API Endpoints
+- **GET /api/blog?language={en|fr}** - List all published blog posts
+- **GET /api/blog/[slug]?language={en|fr}** - Get individual blog post by slug
 
 ## Technology Stack
 - **Framework**: Next.js 15 with App Router
+- **Language**: TypeScript with strict mode
 - **Styling**: Tailwind CSS with Typography plugin
 - **Content**: Markdown processing with remark
-- **Languages**: TypeScript
+- **Fonts**: Geist font family
+- **React**: Version 19 with Server Components
 - **Deployment**: Vercel (configured via vercel.json)

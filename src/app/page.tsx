@@ -293,9 +293,16 @@ const getProjects = (t: Translation, language: string) => [
   {
     title: t.projects.bullets.title,
     description: t.projects.bullets.description,
-    technologies: ["Flutter", "GenAI", "Mobile", "AI"],
+    technologies: ["Flutter", "Whisper", "Firebase", "GPT"],
     github: null,
     demo: "https://www.bulletsapp.io"
+  },
+  {
+    title: t.projects.pickle.title,
+    description: t.projects.pickle.description,
+    technologies: ["Flutter", "Firebase", "GPT"],
+    github: null,
+    demo: "https://www.pickleapp.io"
   },
   {
     title: t.projects.flexsdk.title,
