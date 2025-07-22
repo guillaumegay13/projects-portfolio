@@ -17,6 +17,7 @@ export interface Translation {
         visitProject: string;
         noBlogPosts: string;
         partners: string;
+        githubActivity: string;
     };
     projects: {
         mytrainer: {

@@ -20,6 +20,7 @@ export const translations: Record<string, Translation> = {
       visitProject: "Visit Project →",
       noBlogPosts: "no blog posts available yet",
       partners: "partners",
+      githubActivity: "contributions",
     },
     projects: {
       mytrainer: {
@@ -82,6 +83,7 @@ export const translations: Record<string, Translation> = {
       visitProject: "Voir le Projet →",
       noBlogPosts: "aucun article de blog disponible pour le moment",
       partners: "partenaires",
+      githubActivity: "contributions",
     },
     projects: {
       mytrainer: {

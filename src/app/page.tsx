@@ -4,6 +4,8 @@ import { useLanguage } from './contexts/LanguageContext';
 import { translations } from './i18n/translations';
 import { Translation } from './i18n/translation.interface';
 import { useEffect, useState } from 'react';
+import GitHubContributions from './components/GitHubContributions';
+import SideNavigation from './components/SideNavigation';
 
 interface BlogPost {
   slug: string;
@@ -41,8 +43,10 @@ export default function Home() {
   }, [language]);
 
   return (
-    <div className="min-h-screen p-8 max-w-3xl mx-auto font-light">
-      {/* Minimal Hero Section */}
+    <>
+      <SideNavigation />
+      <div className="min-h-screen p-8 max-w-3xl mx-auto font-light">
+        {/* Minimal Hero Section */}
       <header className="mb-16 mt-8">
         <h1 className="text-3xl mb-4">{t.hero.title}</h1>
         <p className="text-gray-600 dark:text-gray-300 text-xl mb-6">
@@ -153,6 +157,12 @@ export default function Home() {
             </a>
           </div>
         </div>
+      </section>
+
+      {/* GitHub Contributions */}
+      <section id="github-contributions" className="mb-16">
+        <h2 className="text-2xl mb-8">{t.sections.githubActivity}</h2>
+        <GitHubContributions username="guillaumegay13" hideTitle />
       </section>
 
       {/* Projects Section */}
@@ -270,7 +280,8 @@ export default function Home() {
           </p>
         )}
       </section>
-    </div>
+      </div>
+    </>
   );
 }
 
