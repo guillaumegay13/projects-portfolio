@@ -25,5 +25,5 @@ You're all good to get it deployed! Vercel is a great option to host websites fo
 
 ## Conclusion
 Using this workflow, you'll be able to create a SaaS landing page and eventually a few other pages in 5 to 10 minutes and deploy it completely for free! I've use it for those two apps :
-- [Pickle] (https://www.pickleapp.io)
-- [bullets.] (https://www.bulletsapp.io)
+- [Pickle](https://www.pickleapp.io)
+- [bullets.](https://www.bulletsapp.io)
