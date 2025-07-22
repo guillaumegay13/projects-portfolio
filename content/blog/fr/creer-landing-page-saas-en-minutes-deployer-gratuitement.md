@@ -25,5 +25,5 @@ Vous êtes prêt à le déployer ! Vercel est une excellente option pour héberg
 
 ## Conclusion
 En utilisant ce workflow, vous serez capable de créer une landing page SaaS et éventuellement quelques autres pages en 5 à 10 minutes et de la déployer complètement gratuitement ! Je l'ai utilisé pour ces deux applications :
-- https://www.pickleapp.io
-- https://www.bulletsapp.io
+- [Pickle] (https://www.pickleapp.io)
+- [bullets.] (https://www.bulletsapp.io)
