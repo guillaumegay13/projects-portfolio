@@ -5,7 +5,7 @@ date: "2025-07-22"
 published: true
 ---
 
-Après avoir créé rapidement plusieurs applications à l'aide de l'IA, j'avais besoin de landing pages pour les sites web ainsi que de quelques autres pages comme la politique de confidentialité et les conditions d'utilisation pour les publier sur les app stores. En utilisant les bons outils, je suis maintenant capable de le faire **en quelques minutes et 100% gratuitement**.
+Après avoir vibe-coder plusieurs applications, j'avais besoin de landing pages pour les sites web ainsi que de quelques autres pages comme la politique de confidentialité et les conditions d'utilisation pour les publier sur les app stores. En utilisant les bons outils, je suis maintenant capable de le faire **en quelques minutes et 100% gratuitement**.
 
 ## La stack technique et le workflow de développement
 

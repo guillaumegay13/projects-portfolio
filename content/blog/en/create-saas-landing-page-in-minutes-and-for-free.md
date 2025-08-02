@@ -5,7 +5,7 @@ date: "2025-07-22"
 published: true
 ---
 
-After creating multiple apps quickly using AI, I needed website landing pages as well as a few other pages such as privacy policy and terms and conditions to publish it to the app stores. Using the right tools, I'm now able to do it **in a few minutes and 100% free**.
+As I vibe-coded several apps, I needed website landing pages as well as a few other pages such as privacy policy and terms and conditions to publish it to the app stores. Using the right tools, I'm now able to do it **in a few minutes and 100% free**.
 
 ## The tech stack and development workflow
 
