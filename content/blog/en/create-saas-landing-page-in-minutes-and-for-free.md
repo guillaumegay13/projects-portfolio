@@ -21,7 +21,7 @@ I often use ChatGPT to brainstorm about designs and architectures, as well as pr
 Clone the repository locally and open it with an AI-powered IDE like Cursor. Then, you can focus on the details and make the changes you need as you should have more tokens available. Make it perfect, eventually create new pages, change favicon (it's Lovable's one by default), and so on. Commit and push your changes.
 
 ### Vercel
-You're all good to get it deployed! Vercel is a great option to host websites for small projects smoothly. Connect to Vercel (you can even use GitHub authentication!), import your GitHub project (it will detect the language) and click on Deploy. Don't forget to add environment variables if you have any - you can directly import the .env file. If deployment fails, copy the error into your AI IDE to fix it and push your changes : it will automatically redeploy it. Then you're all set! You can configure a custom domain in Vercel too.
+You're all good to get it deployed! Vercel is a great option to host websites for small projects smoothly. Connect to Vercel (you can even use GitHub authentication!), import your GitHub project (it will detect the framework - VueJS) and click on Deploy. Don't forget to add environment variables if you have any - you can directly import the .env file. If deployment fails, copy the error into your AI IDE to fix it and push your changes : it will automatically redeploy it. Then you're all set! You can configure a custom domain in Vercel too.
 
 ## Conclusion
 Using this workflow, you'll be able to create a SaaS landing page and eventually a few other pages in 5 to 10 minutes and deploy it completely for free! I've use it for those two apps :
