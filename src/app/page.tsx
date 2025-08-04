@@ -365,6 +365,11 @@ const getPartners = () => [
     name: "École des Mines de Saint-Étienne",
     logo: "/images/partners/mines-logo.png",
     link: "http://mines-stetienne.fr"
+  },
+  {
+    name: "Daiky",
+    logo: "/images/partners/daiky-logo.png",
+    link: "https://daiky.org"
   }
 ];
 
