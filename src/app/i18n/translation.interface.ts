@@ -24,6 +24,10 @@ export interface Translation {
             title: string;
             description: string;
         };
+        fieldflow: {
+            title: string;
+            description: string;
+        };
         flexsdk: {
             title: string;
             description: string;

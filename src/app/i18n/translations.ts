@@ -27,6 +27,10 @@ export const translations: Record<string, Translation> = {
         title: "MyTrainer",
         description: "A fitness personal trainer mobile app using generative AI."
       },
+      fieldflow: {
+        title: "FieldFlow",
+        description: "Turns any REST API into a GraphQL-like MCP server so agents fetch only the fields they need.",
+      },
       flexsdk: {
         title: "Flex Python SDK",
         description: "Dalet Flex is a powerful media asset management system. I built a Python SDK to allow users to manage their assets and operations programmatically."
@@ -89,6 +93,10 @@ export const translations: Record<string, Translation> = {
       mytrainer: {
         title: "MyTrainer",
         description: "Une application mobile de coaching sportif personnalisé utilisant l'IA générative."
+      },
+      fieldflow: {
+        title: "FieldFlow",
+        description: "Transforme n'importe quelle API REST en serveur MCP GraphQL-like, pour que les agents ne récupèrent que le nécessaire.",
       },
       flexsdk: {
         title: "Flex Python SDK",
