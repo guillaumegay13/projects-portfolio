@@ -18,9 +18,9 @@ export default function SideNavigation() {
 
   const navItems: NavItem[] = [
     { id: 'contact', label: t.sections.contact, active: false },
-    { id: 'contributions', label: t.sections.githubActivity, active: false },
+    { id: 'github-contributions', label: t.sections.githubActivity, active: false },
     { id: 'projects', label: t.sections.projects, active: false },
-    { id: 'partners', label: t.sections.partners, active: false },
+    { id: 'contributions', label: t.sections.contributions, active: false },
     { id: 'thoughts', label: t.sections.thoughts, active: false },
   ];
 
@@ -28,7 +28,7 @@ export default function SideNavigation() {
     const handleScroll = () => {
       const sections = navItems.map(item => ({
         id: item.id,
-        element: document.getElementById(item.id === 'contributions' ? 'github-contributions' : item.id),
+        element: document.getElementById(item.id),
       }));
 
       const scrollPosition = window.scrollY + 100;
@@ -55,8 +55,7 @@ export default function SideNavigation() {
   }, [navItems]);
 
   const handleClick = (sectionId: string) => {
-    const targetId = sectionId === 'contributions' ? 'github-contributions' : sectionId;
-    const element = document.getElementById(targetId);
+    const element = document.getElementById(sectionId);
     if (element) {
       const elementPosition = element.getBoundingClientRect().top + window.scrollY - 80;
       const startPosition = window.scrollY;

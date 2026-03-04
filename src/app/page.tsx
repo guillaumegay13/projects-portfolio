@@ -21,7 +21,7 @@ export default function Home() {
   const { language } = useLanguage();
   const t = translations[language] as Translation;
   const projects = getProjects(t, language);
-  const partners = getPartners();
+  const contributions = getContributions(t);
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
 
   useEffect(() => {
@@ -219,27 +219,56 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Partners Section */}
-        <section id="partners" className="mb-16">
-          <h2 className="text-2xl mb-8">{t.sections.partners}</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-            {partners.map((partner) => (
-              <a
-                key={partner.name}
-                href={partner.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border border-gray-200 dark:border-gray-800 p-4 rounded-lg flex flex-col items-center justify-center hover:border-gray-400 dark:hover:border-gray-600 transition-colors"
+        {/* Contributions Section */}
+        <section id="contributions" className="mb-16">
+          <h2 className="text-2xl mb-8">{t.sections.contributions}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {contributions.map((project) => (
+              <div
+                key={project.title}
+                className="border border-gray-200 dark:border-gray-800 p-6 rounded-lg flex flex-col"
               >
-                {partner.logo ? (
-                  <img
-                    src={partner.logo}
-                    alt={partner.name}
-                    className="h-16 object-contain mb-3 grayscale hover:grayscale-0 transition-all"
-                  />
-                ) : null}
-                <span className="text-center text-gray-600 dark:text-gray-300">{partner.name}</span>
-              </a>
+                <div className="flex-grow">
+                  <h3 className="text-xl mb-4">{project.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4">
+                    {project.description}
+                  </p>
+                </div>
+                <footer>
+                  <div className="flex gap-3 flex-wrap mb-4">
+                    {project.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="text-sm text-gray-500 dark:text-gray-400"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex gap-4">
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm underline hover:text-black dark:hover:text-white"
+                      >
+                        {t.sections.viewSource}
+                      </a>
+                    )}
+                    {project.demo && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm underline hover:text-black dark:hover:text-white"
+                      >
+                        {t.sections.visitProject}
+                      </a>
+                    )}
+                  </div>
+                </footer>
+              </div>
             ))}
           </div>
         </section>
@@ -287,6 +316,7 @@ export default function Home() {
 
 // Update the getProjects function signature
 const getProjects = (t: Translation, language: string) => [
+  // Highlighted projects
   {
     title: t.projects.mytrainer.title,
     description: t.projects.mytrainer.description,
@@ -295,32 +325,82 @@ const getProjects = (t: Translation, language: string) => [
     demo: "https://mytrainerapp.io",
   },
   {
+    title: t.projects.findconcierge.title,
+    description: t.projects.findconcierge.description,
+    technologies: ["Nextjs", "MongoDB", "Typescript", "TailwindCSS"],
+    github: "https://github.com/guillaumegay13/find-concierge",
+    demo: t.projects.findconcierge.demo,
+  },
+  {
+    title: t.projects.send_again.title,
+    description: t.projects.send_again.description,
+    technologies: ["TypeScript", "Amazon SES", "Email"],
+    github: "https://github.com/guillaumegay13/send-again",
+    demo: "https://send-again.com",
+  },
+  {
+    title: t.projects.noiseless_report.title,
+    description: t.projects.noiseless_report.description,
+    technologies: ["Newsletter", "AI"],
+    github: null,
+    demo: "https://www.noiselessreport.ai",
+  },
+  {
+    title: t.projects.xsimilate.title,
+    description: t.projects.xsimilate.description,
+    technologies: ["Next.js", "Email", "X API"],
+    github: null,
+    demo: "https://xsimilate.com",
+  },
+  // Other projects
+  {
+    title: t.projects.fieldflow.title,
+    description: t.projects.fieldflow.description,
+    technologies: ["Python", "FastAPI", "OpenAPI", "MCP"],
+    github: "https://github.com/guillaumegay13/fieldflow",
+    demo: "https://www.fieldflow.dev",
+  },
+  {
+    title: t.projects.n8n_agentic.title,
+    description: t.projects.n8n_agentic.description,
+    technologies: ["TypeScript", "n8n", "AI", "Automation"],
+    github: "https://github.com/guillaumegay13/n8n-agentic",
+    demo: "https://vibe8n.io",
+  },
+{
+    title: t.projects.geotracker.title,
+    description: t.projects.geotracker.description,
+    technologies: ["TypeScript", "SEO", "AI"],
+    github: "https://github.com/guillaumegay13/geotracker",
+    demo: null,
+  },
+  {
+    title: t.projects.youtube_to_viral_clips.title,
+    description: t.projects.youtube_to_viral_clips.description,
+    technologies: ["Python", "AI", "FFmpeg", "Video"],
+    github: "https://github.com/guillaumegay13/youtube-to-viral-clips",
+    demo: null,
+  },
+  {
     title: t.projects.generation_ia.title,
     description: t.projects.generation_ia.description,
     technologies: ["Podcast", "GenAI", language === 'fr' ? "Français" : "French"],
     github: null,
-    demo: "https://pod.link/1811120641"
+    demo: "https://pod.link/1811120641",
   },
   {
     title: t.projects.bullets.title,
     description: t.projects.bullets.description,
     technologies: ["Flutter", "Whisper", "Firebase", "GPT"],
     github: null,
-    demo: "https://www.bulletsapp.io"
+    demo: "https://www.bulletsapp.io",
   },
   {
     title: t.projects.pickle.title,
     description: t.projects.pickle.description,
     technologies: ["Flutter", "Firebase", "GPT"],
     github: null,
-    demo: "https://www.pickleapp.io"
-  },
-  {
-    title: t.projects.fieldflow.title,
-    description: t.projects.fieldflow.description,
-    technologies: ["Python", "FastAPI", "OpenAPI", "MCP"],
-    github: null,
-    demo: "https://www.fieldflow.dev",
+    demo: "https://www.pickleapp.io",
   },
   {
     title: t.projects.flexexecutor.title,
@@ -334,15 +414,25 @@ const getProjects = (t: Translation, language: string) => [
     description: t.projects.anonymization.description,
     technologies: ["Python", "Data", "NLP", "API", language === 'fr' ? "RGPD" : "GDPR"],
     github: null,
-    demo: "https://drive.google.com/file/d/1YTY1ke9ya6hJpDpdMWipR0pnvPVZ9XjX/view?usp=share_link"
+    demo: "https://drive.google.com/file/d/1YTY1ke9ya6hJpDpdMWipR0pnvPVZ9XjX/view?usp=share_link",
+  },
+];
+
+const getContributions = (t: Translation) => [
+  {
+    title: t.contributions.claude_code_telegram.title,
+    description: t.contributions.claude_code_telegram.description,
+    technologies: ["TypeScript", "Telegram", "Claude Code"],
+    github: "https://github.com/RichardAtCT/claude-code-telegram",
+    demo: null,
   },
   {
-    title: t.projects.findconcierge.title,
-    description: t.projects.findconcierge.description,
-    technologies: ["Nextjs", "MongoDB", "Typescript", "TailwindCSS"],
-    github: "https://github.com/guillaumegay13/find-concierge",
-    demo: t.projects.findconcierge.demo
-  }
+    title: t.contributions.datagouv_mcp.title,
+    description: t.contributions.datagouv_mcp.description,
+    technologies: ["TypeScript", "MCP", "Open Data"],
+    github: "https://github.com/datagouv/datagouv-mcp",
+    demo: null,
+  },
 ];
 
 const getPartners = () => [

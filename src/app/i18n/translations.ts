@@ -4,9 +4,9 @@ export const translations: Record<string, Translation> = {
   en: {
     hero: {
       title: "guillaume gay.",
-      subtitle: "software engineer, driven by curiosity and continuous improvement.",
-      passion: "passionate about technology, media, real estate, sports.",
-      help: "i help businesses transform digitally, integrate AI solutions, and build robust product experiences.",
+      subtitle: "software engineer building AI-powered tools and products.",
+      passion: "passionate about AI agents, developer tools, open source, and entrepreneurship.",
+      help: "i build products, contribute to open source, and help businesses integrate AI into their workflows.",
       explore: ["explore my projects,", "read my thoughts", ", or", "let's connect", "."],
       connect: "connect",
       thoughts: "read my thoughts",
@@ -14,13 +14,14 @@ export const translations: Record<string, Translation> = {
     sections: {
       contact: "contact",
       projects: "projects",
+      contributions: "contributions",
       thoughts: "blog",
       readMore: "read more →",
       viewSource: "View Source →",
       visitProject: "Visit Project →",
       noBlogPosts: "no blog posts available yet",
       partners: "partners",
-      githubActivity: "contributions",
+      githubActivity: "activity",
     },
     projects: {
       mytrainer: {
@@ -59,7 +60,41 @@ export const translations: Record<string, Translation> = {
       pickle: {
         title: "Pickle",
         description: "Pregnancy Food Scanner app using GPT-4 API to analyze meals and menus for pregnancy safety."
+      },
+      n8n_agentic: {
+        title: "n8n-agentic",
+        description: "Build n8n workflows with AI. An open source tool that lets you describe automations in natural language and generates n8n workflows."
+      },
+      send_again: {
+        title: "send-again",
+        description: "Open source alternative to Resend, built on Amazon SES. Simple email sending API with developer-friendly interface."
+      },
+      geotracker: {
+        title: "GEOTracker",
+        description: "Open source Generative Engine Optimization (GEO) tool. Track and improve your visibility across AI-powered search engines."
+      },
+      youtube_to_viral_clips: {
+        title: "youtube-to-viral-clips",
+        description: "AI-powered tool that extracts the most viral-worthy clips from YouTube videos automatically."
+      },
+      noiseless_report: {
+        title: "The Noiseless AI Report",
+        description: "A weekly high-signal AI newsletter delivering one concise report on what actually matters in AI."
+      },
+      xsimilate: {
+        title: "Xsimilate",
+        description: "Turns X feeds into newsletters. Select creators you follow and receive a compact monthly summary."
       }
+    },
+    contributions: {
+      claude_code_telegram: {
+        title: "claude-code-telegram",
+        description: "A Telegram bot that gives you remote access to Claude Code from your phone, enabling AI-assisted coding on the go."
+      },
+      datagouv_mcp: {
+        title: "datagouv-mcp",
+        description: "Official data.gouv.fr MCP server that allows AI chatbots to search, explore, and analyze datasets from the French national Open Data platform."
+      },
     },
     partners: {
       dalet: {
@@ -71,9 +106,9 @@ export const translations: Record<string, Translation> = {
   fr: {
     hero: {
       title: "guillaume gay.",
-      subtitle: "ingénieur logiciel, guidé par la curiosité et l'amélioration continue.",
-      passion: "passionné par la technologie, les médias, l'immobilier, le sport.",
-      help: "j'aide les entreprises dans leur transformation digitale, à intégrer des solutions d'IA et à créer des expériences produit robustes.",
+      subtitle: "ingénieur logiciel qui construit des outils et produits propulsés par l'IA.",
+      passion: "passionné par les agents IA, les outils pour développeurs, l'open source et l'entrepreneuriat.",
+      help: "je crée des produits, contribue à l'open source et aide les entreprises à intégrer l'IA dans leurs workflows.",
       explore: ["explorez mes projets,", "lisez mes réflexions", ", ou", "contactez-moi :)", "."],
       connect: "connect",
       thoughts: "lire mes articles",
@@ -81,13 +116,14 @@ export const translations: Record<string, Translation> = {
     sections: {
       contact: "contact",
       projects: "projets",
+      contributions: "contributions",
       thoughts: "blog",
       readMore: "lire plus →",
       viewSource: "Voir le Code →",
       visitProject: "Voir le Projet →",
       noBlogPosts: "aucun article de blog disponible pour le moment",
       partners: "partenaires",
-      githubActivity: "contributions",
+      githubActivity: "activité",
     },
     projects: {
       mytrainer: {
@@ -126,7 +162,41 @@ export const translations: Record<string, Translation> = {
       pickle: {
         title: "Pickle",
         description: "Application de scan alimentaire pour femmes enceintes utilisant l'API GPT-4 pour analyser les repas et menus pour la sécurité pendant la grossesse."
+      },
+      n8n_agentic: {
+        title: "n8n-agentic",
+        description: "Construisez des workflows n8n avec l'IA. Un outil open source qui permet de décrire des automatisations en langage naturel et génère des workflows n8n."
+      },
+      send_again: {
+        title: "send-again",
+        description: "Alternative open source à Resend, construite sur Amazon SES. API d'envoi d'emails simple avec une interface pensée pour les développeurs."
+      },
+      geotracker: {
+        title: "GEOTracker",
+        description: "Outil open source de Generative Engine Optimization (GEO). Suivez et améliorez votre visibilité sur les moteurs de recherche propulsés par l'IA."
+      },
+      youtube_to_viral_clips: {
+        title: "youtube-to-viral-clips",
+        description: "Outil propulsé par l'IA qui extrait automatiquement les clips les plus viraux des vidéos YouTube."
+      },
+      noiseless_report: {
+        title: "The Noiseless AI Report",
+        description: "Une newsletter IA hebdomadaire qui livre un rapport concis et pertinent sur ce qui compte vraiment en IA."
+      },
+      xsimilate: {
+        title: "Xsimilate",
+        description: "Transforme les fils X en newsletters. Sélectionnez les créateurs que vous suivez et recevez un résumé mensuel compact."
       }
+    },
+    contributions: {
+      claude_code_telegram: {
+        title: "claude-code-telegram",
+        description: "Un bot Telegram qui donne un accès distant à Claude Code depuis votre téléphone, pour coder avec l'IA en déplacement."
+      },
+      datagouv_mcp: {
+        title: "datagouv-mcp",
+        description: "Serveur MCP officiel de data.gouv.fr permettant aux chatbots IA de rechercher, explorer et analyser les jeux de données de la plateforme nationale d'Open Data."
+      },
     },
     partners: {
       dalet: {

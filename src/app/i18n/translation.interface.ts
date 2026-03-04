@@ -11,6 +11,7 @@ export interface Translation {
     sections: {
         contact: string;
         projects: string;
+        contributions: string;
         thoughts: string;
         readMore: string;
         viewSource: string;
@@ -54,6 +55,40 @@ export interface Translation {
             description: string;
         };
         pickle: {
+            title: string;
+            description: string;
+        };
+        n8n_agentic: {
+            title: string;
+            description: string;
+        };
+        send_again: {
+            title: string;
+            description: string;
+        };
+        geotracker: {
+            title: string;
+            description: string;
+        };
+        youtube_to_viral_clips: {
+            title: string;
+            description: string;
+        };
+        noiseless_report: {
+            title: string;
+            description: string;
+        };
+        xsimilate: {
+            title: string;
+            description: string;
+        };
+    };
+    contributions: {
+        claude_code_telegram: {
+            title: string;
+            description: string;
+        };
+        datagouv_mcp: {
             title: string;
             description: string;
         };
