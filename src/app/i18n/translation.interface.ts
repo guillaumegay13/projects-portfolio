@@ -92,6 +92,10 @@ export interface Translation {
             title: string;
             description: string;
         };
+        manifest: {
+            title: string;
+            description: string;
+        };
     };
     partners: {
         dalet: {

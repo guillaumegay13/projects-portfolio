@@ -433,6 +433,11 @@ const getContributions = (t: Translation) => [
     github: "https://github.com/datagouv/datagouv-mcp",
     demo: null,
   },
+  {
+    title: t.contributions.manifest.title,
+    description: t.contributions.manifest.description,
+    technologies: ["TypeScript", "YAML", "Postgres"],
+    github: "https://github.com/mnfst/manifest",
+    demo: "https://manifest.build",
+  },
 ];
-
-

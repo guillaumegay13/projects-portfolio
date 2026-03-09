@@ -95,6 +95,10 @@ export const translations: Record<string, Translation> = {
         title: "datagouv-mcp",
         description: "Official data.gouv.fr MCP server that allows AI chatbots to search, explore, and analyze datasets from the French national Open Data platform."
       },
+      manifest: {
+        title: "manifest",
+        description: "Open source portable backend to ship fast, with data, storage, logic, and an admin panel defined in a single file."
+      },
     },
     partners: {
       dalet: {
@@ -196,6 +200,10 @@ export const translations: Record<string, Translation> = {
       datagouv_mcp: {
         title: "datagouv-mcp",
         description: "Serveur MCP officiel de data.gouv.fr permettant aux chatbots IA de rechercher, explorer et analyser les jeux de données de la plateforme nationale d'Open Data."
+      },
+      manifest: {
+        title: "manifest",
+        description: "Backend portable open source pour livrer rapidement, avec donnees, stockage, logique metier et panneau d'administration definis dans un seul fichier."
       },
     },
     partners: {
