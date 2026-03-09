@@ -436,7 +436,7 @@ const getContributions = (t: Translation) => [
   {
     title: t.contributions.manifest.title,
     description: t.contributions.manifest.description,
-    technologies: ["TypeScript", "YAML", "Postgres"],
+    technologies: ["TypeScript", "OpenClaw", "OpenTelemetry"],
     github: "https://github.com/mnfst/manifest",
     demo: "https://manifest.build",
   },

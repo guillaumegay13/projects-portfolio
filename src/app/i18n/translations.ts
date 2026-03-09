@@ -97,7 +97,7 @@ export const translations: Record<string, Translation> = {
       },
       manifest: {
         title: "manifest",
-        description: "Open source portable backend to ship fast, with data, storage, logic, and an admin panel defined in a single file."
+        description: "Open source OpenClaw plugin for smart LLM routing, real-time cost tracking, and privacy-first observability across agent workflows."
       },
     },
     partners: {
@@ -203,7 +203,7 @@ export const translations: Record<string, Translation> = {
       },
       manifest: {
         title: "manifest",
-        description: "Backend portable open source pour livrer rapidement, avec donnees, stockage, logique metier et panneau d'administration definis dans un seul fichier."
+        description: "Plugin OpenClaw open source pour le routage intelligent des LLM, le suivi des coûts en temps réel et une observabilité respectueuse de la vie privée pour les workflows d'agents."
       },
     },
     partners: {
