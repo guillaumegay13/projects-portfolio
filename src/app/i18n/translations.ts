@@ -80,10 +80,6 @@ export const translations: Record<string, Translation> = {
       noiseless_report: {
         title: "The Noiseless AI Report",
         description: "A weekly high-signal AI newsletter delivering one concise report on what actually matters in AI."
-      },
-      xsimilate: {
-        title: "Xsimilate",
-        description: "Turns X feeds into newsletters. Select creators you follow and receive a compact monthly summary."
       }
     },
     contributions: {
@@ -186,10 +182,6 @@ export const translations: Record<string, Translation> = {
       noiseless_report: {
         title: "The Noiseless AI Report",
         description: "Une newsletter IA hebdomadaire qui livre un rapport concis et pertinent sur ce qui compte vraiment en IA."
-      },
-      xsimilate: {
-        title: "Xsimilate",
-        description: "Transforme les fils X en newsletters. Sélectionnez les créateurs que vous suivez et recevez un résumé mensuel compact."
       }
     },
     contributions: {

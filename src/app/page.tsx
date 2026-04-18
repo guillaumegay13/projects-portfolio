@@ -352,13 +352,6 @@ const getProjects = (t: Translation, language: string) => [
     github: null,
     demo: "https://www.noiselessreport.ai",
   },
-  {
-    title: t.projects.xsimilate.title,
-    description: t.projects.xsimilate.description,
-    technologies: ["Next.js", "Email", "X API"],
-    github: null,
-    demo: "https://xsimilate.com",
-  },
   // Other projects
   {
     title: t.projects.fieldflow.title,

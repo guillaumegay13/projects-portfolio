@@ -78,10 +78,6 @@ export interface Translation {
             title: string;
             description: string;
         };
-        xsimilate: {
-            title: string;
-            description: string;
-        };
     };
     contributions: {
         claude_code_telegram: {
